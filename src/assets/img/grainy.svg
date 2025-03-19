@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="grainy">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" />
+        <feColorMatrix type="saturate" values="0" result="greyscale" />
+        <feComponentTransfer color-interpolation-filters="sRGB">
+    </filter>
+</svg>
