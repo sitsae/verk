@@ -40,13 +40,18 @@ export default function Process() {
             <p>Vi tilbyr også support og vedlikehold av nettsiden.</p>
           </div>
         </div>
-        <div id="helpful" className="process-section">
-          {/* Få på en intersectObserver på denne */}
-          <h2>Vi hjelper også med:</h2>
+        <h3>Vi hjelper også med:</h3>
+        <div className="process-section helpful">
           <ul>
-            <li>Domene og webhotell</li>
-            <li>Epost med ditt domenenavn</li>
-            <li>Support og vedlikehold</li>
+            <li>
+              <p>Domene og webhotell</p>
+            </li>
+            <li>
+              <p>Epost med ditt domenenavn</p>
+            </li>
+            <li>
+              <p>Support og vedlikehold</p>
+            </li>
           </ul>
         </div>
       </div>
