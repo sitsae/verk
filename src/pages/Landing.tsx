@@ -4,6 +4,7 @@ import Services from "../components/Services";
 import SmaaSiderSection from "../components/SmaaSiderSection";
 import About from "../components/About";
 import Process from "../components/Process";
+import Footer from "../components/Footer";
 import { useEffect } from "react";
 
 export default function Landing() {
@@ -56,6 +57,9 @@ export default function Landing() {
       </div>
       <div className="section-wrapper">
         <SmaaSiderSection />
+      </div>
+      <div className="section-wrapper footer">
+        <Footer />
       </div>
     </>
   );

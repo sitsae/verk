@@ -63,9 +63,9 @@ export default function Services() {
         <div className="light-text">
           <h3>Full fleksibilitet</h3>
           <p>
-            Du bestemmer selv omfanget av din side. Ønsker du en Landingside med
+            Du bestemmer selv omfanget av din side. Ønsker du en landingside med
             mange ekstra funskjoner, en enklere flersidig nettside eller mer
-            avanserte funksjoner? Kontakt oss og få et tilbud.{" "}
+            avanserte funksjoner? Kontakt oss og få et tilbud.
           </p>
         </div>
         <button className="yellow">
