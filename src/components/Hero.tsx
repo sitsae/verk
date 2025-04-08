@@ -28,11 +28,19 @@ export default function Hero() {
             <p>Vi lager nettsider for små bedrifter og barnehager</p>
           </div>
           <div id="hero-buttons">
-            <button className="compliment">
-              <p>This</p>
+            <button
+              className="compliment"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#services")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <p>Hva tilbyr vi?</p>
             </button>
             <button className="yellow">
-              <p>Or This</p>
+              <p>Send oss en melding</p>
             </button>
           </div>
         </div>

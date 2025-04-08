@@ -40,7 +40,7 @@ export default function Process() {
             <p>Vi tilbyr også support og vedlikehold av nettsiden.</p>
           </div>
         </div>
-        <h3>Vi hjelper også med:</h3>
+        <h3 id="center">Vi hjelper også med:</h3>
         <div className="process-section helpful">
           <ul>
             <li>
