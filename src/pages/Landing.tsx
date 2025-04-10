@@ -55,9 +55,7 @@ export default function Landing() {
       <div className="section-wrapper price">
         <Price />
       </div>
-      <div className="section-wrapper">
-        <SmaaSiderSection />
-      </div>
+
       <div className="section-wrapper footer">
         <Footer />
       </div>

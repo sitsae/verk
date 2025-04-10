@@ -16,7 +16,15 @@ export default function Hero() {
               <a href="#">
                 <li>Om oss</li>
               </a>
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector("#contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <li>Kontakt</li>
               </a>
             </ul>
@@ -39,7 +47,15 @@ export default function Hero() {
             >
               <p>Hva tilbyr vi?</p>
             </button>
-            <button className="yellow">
+            <button
+              className="yellow"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <p>Send oss en melding</p>
             </button>
           </div>

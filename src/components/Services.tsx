@@ -68,7 +68,15 @@ export default function Services() {
             avanserte funksjoner? Kontakt oss og få et tilbud.
           </p>
         </div>
-        <button className="yellow">
+        <button
+          className="yellow"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .querySelector("#contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           <p>Fortell oss hva du ønsker</p>
         </button>
       </div>
