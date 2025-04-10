@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import Price from "../components/Price";
 import Services from "../components/Services";
-import SmaaSiderSection from "../components/SmaaSiderSection";
 import About from "../components/About";
 import Process from "../components/Process";
 import Footer from "../components/Footer";
