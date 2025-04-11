@@ -409,17 +409,15 @@ footer {
   flex-wrap: wrap;
 }
 #contact-text {
-  min-width: 380px;
-  max-width: 50%;
+  flex-basis: 50%;
 }
-#contact {
-  width: 380px;
-}
+
 #contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-basis: 350px;
   gap: 1rem;
 }
 #contact form {
@@ -428,7 +426,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  width: 350px;
+  width: 100%;
 }
 #contact form > input,
 label,
@@ -512,5 +510,8 @@ textarea {
   .service {
     width: calc(100%);
     margin: 0 auto;
+  }
+  #contact-text {
+    flex-basis: 100%;
   }
 }
