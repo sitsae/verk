@@ -67,7 +67,7 @@ footer {
   top: 0;
   left: 0;
   padding: 3rem;
-  width: 300px;
+  width: 200px;
   z-index: 1;
 }
 
@@ -462,7 +462,7 @@ textarea {
     padding: 1.5rem;
   }
   #logo {
-    width: 180px;
+    width: 100px;
     padding: 1.5rem;
   }
 
