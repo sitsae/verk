@@ -10,10 +10,26 @@ export default function Hero() {
         <div id="hero">
           <div id="nav">
             <ul>
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector("#services")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <li>Tjenester</li>
               </a>
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector("#about")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <li>Om oss</li>
               </a>
               <a
