@@ -1,7 +1,7 @@
 // Skal inneholde en Tekst og et call to action for å få brukeren til å ta kontakt
 // Skal også inneholde en logo
 
-import Logo from "../assets/img/Logo.png";
+import Logo from "../assets/img/Logo.svg";
 
 export default function Hero() {
   return (

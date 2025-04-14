@@ -10,9 +10,9 @@ export default function Footer() {
         <p>
           Ta kontakt med Sigurd i dag for å få et uforpliktende tilbud på din
           nettside ved å fylle ut skjemaet under, ring på telefonnummeret
-          <a href="tel:+4791234567"> +47 91 23 45 67</a> eller send oss en epost
+          <a href="tel:+4793069710"> +47 93 06 97 10</a> eller send oss en epost
           til{" "}
-          <a href="mailto:torve_s@live.no?subject=Jeg ønsker en nettside">
+          <a href="mailto:torve_s@live.no?subject=Jeg er interessert i en nettside">
             torve_s@live.no
           </a>
         </p>
@@ -88,6 +88,11 @@ export default function Footer() {
             <p>Send</p>
           </button>
         </form>
+      </div>
+      <div style={{ position: "absolute", bottom: "0" }}>
+        <a className={"light-text"} href="./personvern">
+          <p style={{ fontSize: "1rem" }}>Personvern</p>
+        </a>
       </div>
     </footer>
   );

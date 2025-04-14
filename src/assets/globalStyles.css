@@ -445,6 +445,27 @@ textarea {
 #contact-text a {
   color: #f6f7b6;
 }
+#policy-wrapper {
+  max-width: 1440px;
+  margin: 4rem auto;
+}
+#policy-wrapper h2 {
+  margin-top: 2.5rem;
+}
+#back-button {
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  background-color: #f6f7b6;
+}
+#back-button:hover {
+  background-color: #f09ba8;
+  transition: background-color 0.2s ease-out;
+  outline: #0a0c27 2px solid;
+}
 
 @media screen and (max-width: 846px) {
   #hero-wrapper {
@@ -462,7 +483,7 @@ textarea {
     padding: 1.5rem;
   }
   #logo {
-    width: 100px;
+    width: 150px;
     padding: 1.5rem;
   }
 
