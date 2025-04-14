@@ -479,6 +479,7 @@ textarea {
   #hero {
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
   }
   #hero h1,
   #hero p {
