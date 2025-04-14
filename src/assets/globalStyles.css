@@ -467,6 +467,11 @@ textarea {
   outline: #0a0c27 2px solid;
 }
 
+#personvern-link:hover {
+  text-decoration: underline;
+  transition: underline 0.2s ease-out;
+  cursor: pointer;
+}
 @media screen and (max-width: 846px) {
   #hero-wrapper {
     padding: 1rem;

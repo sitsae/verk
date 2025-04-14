@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
   return (
     <footer id="footer-wrapper" className="light-text">
       <div id="contact-text">
@@ -90,8 +93,10 @@ export default function Footer() {
         </form>
       </div>
       <div style={{ position: "absolute", bottom: "0" }}>
-        <a className={"light-text"} href="./personvern">
-          <p style={{ fontSize: "1rem" }}>Personvern</p>
+        <a className={"light-text"} onClick={() => navigate("/personvern")}>
+          <p id="personvern-link" style={{ fontSize: "1rem" }}>
+            Personvern
+          </p>
         </a>
       </div>
     </footer>

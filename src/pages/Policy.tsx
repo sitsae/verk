@@ -1,9 +1,11 @@
 import { BiArrowBack } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export default function Policy() {
+  const navigate = useNavigate();
   return (
     <div id="policy-wrapper">
-      <button id="back-button" onClick={() => window.history.back()}>
+      <button id="back-button" onClick={() => navigate(-1)}>
         <BiArrowBack size={"30px"} />
       </button>
       <p>

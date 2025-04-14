@@ -33,7 +33,7 @@ export default function About() {
                     color: "green",
                     width: "2.5rem",
                   }}
-                  size={"sm"}
+                  size={"40px"}
                 />
                 Profesjonell, rask og sikker nettside
               </p>
@@ -45,7 +45,7 @@ export default function About() {
                     color: "green",
                     width: "2.5rem",
                   }}
-                  size={"sm"}
+                  size={"40px"}
                 />
                 Nettside tilpasset deg og dine brukere
               </p>
@@ -57,7 +57,7 @@ export default function About() {
                     color: "green",
                     width: "2.5rem",
                   }}
-                  size={"sm"}
+                  size={"40px"}
                 />
                 Valgfri funksjonalitet og design
               </p>
@@ -69,7 +69,7 @@ export default function About() {
                     color: "green",
                     width: "2.5rem",
                   }}
-                  size={"sm"}
+                  size={"40px"}
                 />
                 Hjelp til å utvikle deg videre på nett
               </p>
