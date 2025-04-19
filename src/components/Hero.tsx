@@ -37,6 +37,17 @@ export default function Hero() {
                 onClick={(e) => {
                   e.preventDefault();
                   document
+                    .querySelector("#price-wrapper")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <li>Priser</li>
+              </a>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}

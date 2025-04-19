@@ -1,4 +1,5 @@
 import { CgCheck } from "react-icons/cg";
+import portrait from "../assets/img/portrait.png";
 export default function About() {
   return (
     <section id="about">
@@ -22,7 +23,6 @@ export default function About() {
             presentere, enklest mulig.
           </p>
         </div>
-
         <div className="right">
           <h3>Hva får du fra oss?</h3>
           <ul>
@@ -75,6 +75,29 @@ export default function About() {
               </p>
             </li>
           </ul>
+          <div id="person">
+            <div className="portrait-wrapper">
+              <img src={portrait} />
+            </div>
+            <div className="person-text">
+              <h4>Sigurd T. Sæther</h4>
+              <p>
+                Sigurd er en engasjert webutvikler som brenner for god service
+                og design som er tilpasset brukernes behov. <br />
+              </p>
+            </div>
+            <div
+              id="contact-info"
+              style={{ position: "absolute", bottom: "0" }}
+            >
+              <a href="maito:torve_s@live.no">
+                <p>Send epost til Sigurd.</p>
+              </a>{" "}
+              <a href="tel:+4793069710">
+                <p>Eller ring (+47) 93 06 97 10</p>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

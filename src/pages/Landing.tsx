@@ -5,6 +5,7 @@ import About from "../components/About";
 import Process from "../components/Process";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import Responsive from "../components/Resonsive";
 
 export default function Landing() {
   useEffect(() => {
@@ -40,6 +41,9 @@ export default function Landing() {
       </div>
       <div className="section-wrapper about">
         <About />
+      </div>
+      <div className="section-wrapper responsive">
+        <Responsive />
       </div>
       <div className="section-wrapper">
         <Process />
