@@ -60,7 +60,7 @@ export default function Hero() {
 
           <div>
             <h1>Gjør din bedrift synlig på nett</h1>
-            <p>Vi lager nettsider for små bedrifter og barnehager</p>
+            <p>Vi lager nettsider for små bedrifter</p>
           </div>
           <div id="hero-buttons">
             <button
