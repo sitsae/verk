@@ -36,7 +36,7 @@ export default function Policy() {
         <br />
         <strong>Kontaktinformasjon:</strong>
         <br />- <strong>Navn:</strong> Sigurd T. Sæther
-        <br />- <strong>Telefon:</strong> +47 91 23 45 67
+        <br />- <strong>Telefon:</strong> +47 93 06 97 10
         <br />- <strong>E-post:</strong> torve_s@live.no
       </p>
       <p>
