@@ -5,7 +5,7 @@ import About from "../components/About";
 import Process from "../components/Process";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import Responsive from "../components/Resonsive";
+import Responsive from "../components/Responsive";
 
 export default function Landing() {
   useEffect(() => {
