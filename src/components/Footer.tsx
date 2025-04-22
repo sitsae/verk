@@ -48,7 +48,7 @@ export default function Footer() {
             } else if (response.status === 200) {
               const data = await response;
               console.log("Message sent successfully:", data);
-              alert("Meldingen ble sendt!");
+              navigate("/success");
               setName("");
               setEmail("");
               setMessage("");
