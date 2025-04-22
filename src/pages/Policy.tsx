@@ -8,13 +8,6 @@ export default function Policy() {
       <button id="back-button" onClick={() => navigate(-1)}>
         <BiArrowBack size={"30px"} />
       </button>
-      <p>
-        Nedenfor finner du et utkast til en personvernerklæring for nettsiden{" "}
-        <strong>saetherverk.no</strong>, tilpasset innholdet vi finner på siden
-        og med grunnlag i personvernforordningen (GDPR). Denne erklæringen skal
-        informere besøkende om hvordan vi samler inn, bruker og beskytter
-        personopplysninger, samt hvilke rettigheter du har som registrert.
-      </p>
 
       <h1>Personvernerklæring for saetherverk.no</h1>
 
