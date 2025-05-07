@@ -11,6 +11,10 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
+import { useEffect } from "react";
+import { insertPageLoad } from "./utils/supabase";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,6 +27,13 @@ function App() {
       </Route>
     )
   );
+
+  useEffect(() => {
+    const uid = localStorage.getItem("uuid") || uuidv4();
+    localStorage.setItem("uuid", uid);
+    insertPageLoad(uid);
+  }, []);
+
   return <RouterProvider router={router} />;
 }
 

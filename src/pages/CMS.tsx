@@ -101,7 +101,7 @@ export default function CMS() {
     return dateStr;
   };
 
-  const loadsToDay = dailyLoads ? dailyLoads[0].value_count : "ingen data";
+  const loadsToDay = dailyLoads ? dailyLoads[0].value_count : 0;
 
   // const container = {
   //   display: "flex",

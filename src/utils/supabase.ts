@@ -68,7 +68,7 @@ export const updateAbout = async (
 
 export const insertPageLoad = async (id: string) => {
   const { data, error } = await supabase
-    .from("page_loads")
+    .from("page_loads_verk")
     .insert([{ uuid: String(id), created_at: new Date() }])
     .select();
   if (error) {
@@ -80,7 +80,7 @@ export const insertPageLoad = async (id: string) => {
 };
 
 export const getPageLoads = async (setStateFn: (data: any) => any) => {
-  const { data, error } = await supabase.from("load_count").select("*");
+  const { data, error } = await supabase.from("load_count_verk").select("*");
   if (data) {
     setStateFn(data[0].load_count);
   }
@@ -90,7 +90,7 @@ export const getPageLoads = async (setStateFn: (data: any) => any) => {
 };
 
 export const getUniquePageLoads = async (setStateFn: (data: any) => any) => {
-  const { data, error } = await supabase.from("unique_users_count").select("*");
+  const { data, error } = await supabase.from("unique_users_count_verk").select("*");
   if (data) {
     setStateFn(data[0].distinct_user_count);
   }
@@ -100,8 +100,9 @@ export const getUniquePageLoads = async (setStateFn: (data: any) => any) => {
 };
 
 export const getDailyLoads = async (setStateFn: (data: any) => any) => {
-  const { data, error } = await supabase.from("daily_loads").select("*");
+  const { data, error } = await supabase.from("daily_loads_verk").select("*");
   if (data) {
+    console.log(data);
     setStateFn(data);
   }
   if (error) {
