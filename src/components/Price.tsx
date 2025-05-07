@@ -8,14 +8,8 @@ export default function Price() {
         Pris på nettsiden vil variere etter valgene man tar underveis i
         prosessen, men det er to startpriser som gjelder for alle nettsider:
       </p>
-      <ol>
-        <li>
-          Enkel landingside: <span className="n-price">10 000kr</span>
-        </li>
-        <li>
-          Nettside med flere sider: <span className="n-price">15 000kr</span>
-        </li>
-      </ol>
+          <p>Enkel landingside: <span className="n-price">{" "}10 000kr</span></p>
+          <p>Nettside med flere sider: <span className="n-price">{" "}15 000kr</span></p>
       <p>
         Det vil være mulig å legge til flere funksjoner og tjenester underveis i
         prosessen. Dette vil kunne påvirke prisen på nettsiden. Eksempler på
