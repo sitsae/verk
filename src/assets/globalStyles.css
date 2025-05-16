@@ -417,7 +417,12 @@ section#about {
 .section-wrapper {
   width: 100%;
 }
-
+.service li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #0a0c27;
+}
 .section-wrapper.services {
   background-color: #0a0c27;
   padding: 2rem;
