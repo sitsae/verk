@@ -1,4 +1,6 @@
+import { DailyLoads } from "@/pages/CMS";
 import { createClient } from "@supabase/supabase-js";
+import { Dispatch } from "react";
 
 const supabaseApiKey = import.meta.env.VITE_SUPABASE_KEY;
 const supabaseUrl = "https://hagukythqzirlmubsyje.supabase.co";
@@ -79,7 +81,9 @@ export const insertPageLoad = async (id: string) => {
   }
 };
 
-export const getPageLoads = async (setStateFn: (data: unknown) => void) => {
+export const getPageLoads = async (
+  setStateFn: Dispatch<React.SetStateAction<number | undefined>>
+) => {
   const { data, error } = await supabase.from("load_count_verk").select("*");
   if (data) {
     setStateFn(data[0].load_count);
@@ -90,7 +94,7 @@ export const getPageLoads = async (setStateFn: (data: unknown) => void) => {
 };
 
 export const getUniquePageLoads = async (
-  setStateFn: (data: unknown) => void
+  setStateFn: Dispatch<React.SetStateAction<number | undefined>>
 ) => {
   const { data, error } = await supabase
     .from("unique_users_count_verk")
@@ -103,7 +107,9 @@ export const getUniquePageLoads = async (
   }
 };
 
-export const getDailyLoads = async (setStateFn: (data: unknown) => void) => {
+export const getDailyLoads = async (
+  setStateFn: React.Dispatch<React.SetStateAction<DailyLoads[] | undefined>>
+) => {
   const { data, error } = await supabase.from("daily_loads_verk").select("*");
   if (data) {
     console.log(data);

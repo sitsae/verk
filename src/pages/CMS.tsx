@@ -21,8 +21,8 @@ export interface DailyLoads {
 
 export default function CMS() {
   const [session, setSession] = useState<Session | null>(null);
-  const [pageLoads, setPageLoads] = useState<any>();
-  const [uniquePageLoads, setUniquePageLoads] = useState<any>();
+  const [pageLoads, setPageLoads] = useState<number>();
+  const [uniquePageLoads, setUniquePageLoads] = useState<number>();
   const [dailyLoads, setDailyLoads] = useState<DailyLoads[]>();
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -158,7 +158,7 @@ export default function CMS() {
               <Heading>Sidelastninger</Heading>
               <Text>{pageLoads}</Text>
               <Heading>Unike Sidelastinger</Heading>
-              <Text>{uniquePageLoads}</Text>
+              <Text>{uniquePageLoads ?? 0}</Text>
 
               <Heading>Sidelastninger i dag</Heading>
               <Text>{loadsToDay}</Text>
