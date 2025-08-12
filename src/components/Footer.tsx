@@ -8,7 +8,7 @@ export default function Footer() {
   const navigate = useNavigate();
 
   const mailUrl =
-    process.env.ENVIROMENT === "production"
+    import.meta.env.ENVIRONMENT === "production"
       ? "https://erfaringeras-89fa2e105c06.herokuapp.com"
       : "http://localhost:3000";
 
@@ -38,23 +38,27 @@ export default function Footer() {
               email: email,
               message: message,
             };
-            const response = await fetch(`${mailUrl}/verk/`, {
-              body: JSON.stringify(params),
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            });
-            if (!response.ok) {
-              console.error("Error sending message:", response.statusText);
-              return;
-            } else if (response.status === 200) {
-              const data = await response;
-              console.log("Message sent successfully:", data);
-              navigate("/success");
-              setName("");
-              setEmail("");
-              setMessage("");
+            try {
+              const response = await fetch(`${mailUrl}/verk/`, {
+                body: JSON.stringify(params),
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+              if (!response.ok) {
+                console.error("Error sending message:", response.statusText);
+                return;
+              } else if (response.status === 200) {
+                const data = await response.json();
+                console.log("Message sent successfully:", data);
+                navigate("/success");
+                setName("");
+                setEmail("");
+                setMessage("");
+              }
+            } catch (error) {
+              console.error("Error sending message:", error);
             }
           }}
         >
