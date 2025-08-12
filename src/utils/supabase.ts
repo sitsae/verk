@@ -31,7 +31,7 @@ export const signOut = async () => {
   }
 };
 
-export const getAboutContent = async (setStateFn: (data: any) => any) => {
+export const getAboutContent = async (setStateFn: (data: unknown) => void) => {
   try {
     const { data, error } = await supabase.from("about").select();
     if (data) {
@@ -79,7 +79,7 @@ export const insertPageLoad = async (id: string) => {
   }
 };
 
-export const getPageLoads = async (setStateFn: (data: any) => any) => {
+export const getPageLoads = async (setStateFn: (data: unknown) => void) => {
   const { data, error } = await supabase.from("load_count_verk").select("*");
   if (data) {
     setStateFn(data[0].load_count);
@@ -89,8 +89,12 @@ export const getPageLoads = async (setStateFn: (data: any) => any) => {
   }
 };
 
-export const getUniquePageLoads = async (setStateFn: (data: any) => any) => {
-  const { data, error } = await supabase.from("unique_users_count_verk").select("*");
+export const getUniquePageLoads = async (
+  setStateFn: (data: unknown) => void
+) => {
+  const { data, error } = await supabase
+    .from("unique_users_count_verk")
+    .select("*");
   if (data) {
     setStateFn(data[0].distinct_user_count);
   }
@@ -99,7 +103,7 @@ export const getUniquePageLoads = async (setStateFn: (data: any) => any) => {
   }
 };
 
-export const getDailyLoads = async (setStateFn: (data: any) => any) => {
+export const getDailyLoads = async (setStateFn: (data: unknown) => void) => {
   const { data, error } = await supabase.from("daily_loads_verk").select("*");
   if (data) {
     console.log(data);
@@ -139,7 +143,7 @@ export const insertComment = async (
   }
 };
 
-export const getComments = async (setStateFn: (data: any) => any) => {
+export const getComments = async (setStateFn: (data: unknown) => void) => {
   const { data, error } = await supabase.from("comments").select("*");
   if (data) {
     setStateFn(data);

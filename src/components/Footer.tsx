@@ -6,6 +6,12 @@ export default function Footer() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+
+  const mailUrl =
+    process.env.ENVIROMENT === "production"
+      ? "https://erfaringeras-89fa2e105c06.herokuapp.com"
+      : "http://localhost:3000";
+
   return (
     <footer id="footer-wrapper" className="light-text">
       <div id="contact-text">
@@ -32,16 +38,13 @@ export default function Footer() {
               email: email,
               message: message,
             };
-            const response = await fetch(
-              "https://erfaringeras-89fa2e105c06.herokuapp.com/verk/",
-              {
-                body: JSON.stringify(params),
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              }
-            );
+            const response = await fetch(`${mailUrl}/verk/`, {
+              body: JSON.stringify(params),
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
             if (!response.ok) {
               console.error("Error sending message:", response.statusText);
               return;
