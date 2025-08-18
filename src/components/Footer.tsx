@@ -7,10 +7,7 @@ export default function Footer() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const mailUrl =
-    import.meta.env.ENVIRONMENT === "production"
-      ? "https://erfaringeras-89fa2e105c06.herokuapp.com"
-      : "http://localhost:3000";
+  const mailUrl = "https://erfaringeras-89fa2e105c06.herokuapp.com";
 
   return (
     <footer id="footer-wrapper" className="light-text">
