@@ -13,15 +13,11 @@ export default function Landing() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(`${entry.target.className} is in view`);
             entry.target.classList.add("show");
-          }
-          if (!entry.isIntersecting) {
-            console.log(`${entry.target.className} is out of view`);
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.2 }
     );
     const aboutItems = document.querySelectorAll("#about-wrapper > .right");
     const sections = document.querySelectorAll(".helpful");

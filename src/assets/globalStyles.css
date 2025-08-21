@@ -213,6 +213,7 @@ section#about {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 200px;
 }
 
 .right li {
@@ -391,37 +392,80 @@ section#about {
 
 #service-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.8rem;
   margin: 0 auto 1.8rem auto;
 }
 .service {
-  background-color: #fff;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 384px;
+  border-radius: 8px;
+  margin: 0 auto;
+  background-color: #fff;
+  /* height: 400px; */
+  overflow: hidden;
+  flex-wrap: wrap;
 }
-.service p {
+.service.multipage {
+  flex-direction: row-reverse;
+}
+.service-text {
+  flex-basis: 400px;
+  padding: 2rem;
+  flex-grow: 1;
+  max-height: 400px;
+  flex-shrink: 0;
+}
+
+.service-text p {
   font-size: 1.2rem;
   color: rgb(10, 12, 39);
 }
-.service h3 {
+.service-text h3 {
   font-size: 1.6rem;
   color: rgb(10, 12, 39);
 }
-.service ul {
+.service-text ul {
   list-style: inside none;
 }
 .section-wrapper {
   width: 100%;
 }
-.service li {
+.service-text li {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   color: #0a0c27;
+}
+.service-img {
+  flex-basis: 400px;
+  flex-shrink: 0;
+  flex-grow: 1;
+  /* min-width: 50%; */
+  background-color: #0a0c2799;
+  max-height: 400px;
+}
+
+.service.landingpage .service-img {
+  padding: 2.7rem;
+}
+.service.multipage .service-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.service.multipage .service-img img {
+  min-width: 130%;
+  transform: rotate(-2deg);
 }
 .section-wrapper.services {
   background-color: #0a0c27;
@@ -563,7 +607,7 @@ textarea {
   max-width: 800px;
   margin: 0 auto;
 }
-@media screen and (max-width: 846px) {
+@media screen and (max-width: 864px) {
   #hero-wrapper {
     padding: 1rem;
   }
@@ -630,6 +674,9 @@ textarea {
   }
   #services {
     padding: 0;
+  }
+  .service.landingpage .service-img {
+    padding: 2rem 20%;
   }
   .service {
     width: calc(100%);
