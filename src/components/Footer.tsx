@@ -1,13 +1,53 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import { mockSendMessage } from "@/utils/dev-functions";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const mailUrl = "https://erfaringeras-89fa2e105c06.herokuapp.com";
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const formData = { name: name, email: email, message: message };
+    console.log(formData);
+    const params = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    try {
+      const response = await fetch(`${mailUrl}/verk/`, {
+        body: JSON.stringify(params),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        console.error("Error sending message:", response.statusText);
+        return;
+      } else if (response.status === 200) {
+        const data = await response.json();
+        console.log("Message sent successfully:", data);
+        setIsLoading(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        navigate("/success");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setIsLoading(false);
+    }
+  };
+
+  const loader = <div className="loader"></div>;
 
   return (
     <footer id="footer-wrapper" className="light-text">
@@ -24,41 +64,7 @@ export default function Footer() {
         </p>
       </div>
       <div id="contact" className="">
-        <form
-          action="POST"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            const formData = { name: name, email: email, message: message };
-            console.log(formData);
-            const params = {
-              name: name,
-              email: email,
-              message: message,
-            };
-            try {
-              const response = await fetch(`${mailUrl}/verk/`, {
-                body: JSON.stringify(params),
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              });
-              if (!response.ok) {
-                console.error("Error sending message:", response.statusText);
-                return;
-              } else if (response.status === 200) {
-                const data = await response.json();
-                console.log("Message sent successfully:", data);
-                navigate("/success");
-                setName("");
-                setEmail("");
-                setMessage("");
-              }
-            } catch (error) {
-              console.error("Error sending message:", error);
-            }
-          }}
-        >
+        <form action="POST" onSubmit={handleSubmit}>
           <h2 className="">Kontakt oss</h2>
           <label htmlFor="name">Navn:</label>
           <input
@@ -91,9 +97,23 @@ export default function Footer() {
             required
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <button className="pink" type="submit">
-            <p>Send</p>
-          </button>
+          <div
+            style={{
+              height: "2.5rem",
+              width: "59px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {isLoading ? (
+              loader
+            ) : (
+              <button className="pink submit" type="submit">
+                <p>Send</p>
+              </button>
+            )}
+          </div>
         </form>
       </div>
       <div style={{ position: "absolute", bottom: "0" }}>

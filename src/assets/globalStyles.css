@@ -556,6 +556,38 @@ textarea {
 #contact-text a {
   color: #f6f7b6;
 }
+
+.loader {
+  width: 1.6rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f09ba8;
+  animation: l2 1.5s infinite;
+}
+@keyframes l2 {
+  0%,
+  100% {
+    transform: translate(-35px);
+    box-shadow: 0 0 #f6f7b6, 0 0 #f09ba8;
+  }
+  40% {
+    transform: translate(35px);
+    box-shadow: -15px 0 #f6f7b6, -30px 0 #f09ba8;
+  }
+  50% {
+    transform: translate(35px);
+    box-shadow: 0 0 #f6f7b6, 0 0 #f09ba8;
+  }
+  90% {
+    transform: translate(-35px);
+    box-shadow: 15px 0 #f6f7b6, 30px 0 #f09ba8;
+  }
+}
+/* button.pink.submit {
+  min-width: 100px;
+  min-height: 56px;
+} */
+
 #policy-wrapper {
   max-width: 800px;
   margin: 4rem auto;
